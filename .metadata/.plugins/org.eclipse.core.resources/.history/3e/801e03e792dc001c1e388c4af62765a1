@@ -1,0 +1,7 @@
+package com.multi;
+
+public class Dao {
+	public void insert(UserVO user) {
+		System.out.println("Inserted : "+user);
+	}
+}

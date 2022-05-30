@@ -1,0 +1,7 @@
+package com.test;
+
+import com.frame.Service;
+
+public class ItemInsertTest implements Service<K, V> {
+
+}

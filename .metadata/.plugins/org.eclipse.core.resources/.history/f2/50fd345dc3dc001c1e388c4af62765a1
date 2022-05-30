@@ -1,0 +1,40 @@
+package com.user;
+
+import java.util.List;
+
+import com.frame.Dao;
+import com.vo.UserVO;
+
+public class UserDao implements Dao<String, UserVO> {
+
+	@Override
+	public void insert(UserVO v) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(String k) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void update(UserVO v) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public UserVO select(String k) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<UserVO> select() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

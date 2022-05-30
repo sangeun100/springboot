@@ -1,0 +1,68 @@
+package com.vo;
+
+public class ProductVO {
+//	private Integer id;
+	private String name;
+	private int price;
+//	private String date;
+	private String rate;
+
+	public ProductVO() {
+		super();
+	}
+
+	public ProductVO(String name, int price, String rate) {
+		super();
+//		this.id = id;
+		this.name = name;
+		this.price = price;
+//		this.date = date;
+		this.rate = rate;
+	}
+
+//	public String getId() {
+//		return id;
+//	}
+//
+//	public void setId(String id) {
+//		this.id = id;
+//	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
+//	public String getDate() {
+//		return date;
+//	}
+//
+//	public void setDate(String date) {
+//		this.date = date;
+//	}
+
+	public String getRate() {
+		return rate;
+	}
+
+	public void setRate(String rate) {
+		this.rate = rate;
+	}
+
+	@Override
+	public String toString() {
+		return "ProductVO [name=" + name + ", price=" + price + ", rate=" + rate + "]";
+	}
+
+}

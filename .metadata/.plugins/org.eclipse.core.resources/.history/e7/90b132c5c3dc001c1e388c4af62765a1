@@ -1,0 +1,40 @@
+package com.user;
+
+import java.util.List;
+
+import com.frame.Service;
+import com.vo.UserVO;
+
+public class UserService implements Service<String, UserVO> {
+
+	@Override
+	public void register(UserVO v) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void remove(String k) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void modify(UserVO v) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public UserVO get(String k) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<UserVO> get() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

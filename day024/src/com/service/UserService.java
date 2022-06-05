@@ -13,10 +13,11 @@ public class UserService implements Service<String, UserVO> {
 
 	@Autowired //자동으로 dao 해당하는 걸 검색해서 가져와라
 	UserMapper dao;
-	
+
 	@Override
 	public void register(UserVO v) {
 		dao.insert(v);
+		
 	}
 
 	@Override
@@ -26,18 +27,21 @@ public class UserService implements Service<String, UserVO> {
 	}
 
 	@Override
-	public void modify(UserVO v) {
-		dao.update(v);		
+	public void modify(UserVO v)  {
+		dao.update(v);
+		
 	}
 
 	@Override
-	public UserVO get(String k) {		
+	public UserVO get(String k){
 		return dao.select(k);
 	}
 
 	@Override
-	public List<UserVO> get() {
+	public List<UserVO> get()  {
+
 		return dao.selectall();
 	}
-
+	
+	
 }

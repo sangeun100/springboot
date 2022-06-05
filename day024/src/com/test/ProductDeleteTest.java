@@ -13,7 +13,7 @@ public class ProductDeleteTest {
 
 		Service<Integer, ProductVO> service = (Service<Integer, ProductVO>) factory.getBean("pservice");
 
-		service.remove(1);
+		service.remove(5);
 
 	}
 

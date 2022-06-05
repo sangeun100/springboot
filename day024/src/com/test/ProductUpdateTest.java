@@ -14,9 +14,9 @@ public class ProductUpdateTest {
 		public static void main(String[] args) {
 			ApplicationContext factory = new ClassPathXmlApplicationContext("spring.xml");
 
-			Service<String, ProductVO> service = (Service<String, ProductVO>) factory.getBean("pservice");
+			Service<Integer, ProductVO> service = (Service<Integer, ProductVO>) factory.getBean("pservice");
 
-			ProductVO p = new ProductVO(null,"pants", 10200, Date, "3.8");
+			ProductVO p = new ProductVO("pants3", 10200, 3.8);
 			service.modify(p);
 
 	}

@@ -1,5 +1,0 @@
-package com.multi.user;
-
-public interface UserOracleDao {
-
-}

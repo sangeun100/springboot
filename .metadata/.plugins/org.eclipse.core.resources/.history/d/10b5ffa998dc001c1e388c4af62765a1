@@ -1,7 +1,0 @@
-package com.multi.user;
-
-import com.multi.frame.Service;
-
-public class UserService implements Service<V> {
-
-}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.ProductMapper">
+
+	<select id="select" parameterType="int" resultType="product"> <!-- 조인 걸어서 갖고 오게끔 -->
+		SELECT
+		p.id,p.name,p.price,p.regdate,p.cid,c.name as catename 
+		FROM product p
+		INNER JOIN cate c ON p.cid = c.id
+		WHERE p.id = #{id}
+	</select>
+	<select id="selectall" resultType="product"> <!-- 카테 네임 써서 조인을 걸어서 -->
+		SELECT
+		p.id,p.name,p.price,p.regdate,p.cid,c.name as catename 
+		FROM product p
+		INNER JOIN cate c ON p.cid = c.id
+	</select>
+	<insert id="insert" parameterType="product">
+		INSERT INTO PRODUCT VALUES
+		(NULL,#{name},#{price},SYSDATE(),#{cid})
+	</insert>
+	<update id="update" parameterType="product">
+		UPDATE PRODUCT SET
+		NAME=#{name},PRICE=#{price},CID=#{cid} WHERE ID=#{id}
+	</update>
+	<delete id="delete" parameterType="int">
+		DELETE FROM PRODUCT WHERE ID=#{id}
+	</delete>
+
+
+</mapper>
+
+
+
+
+
+

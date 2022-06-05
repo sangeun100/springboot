@@ -15,8 +15,8 @@ public class ProductSelectAllTest {
 		ApplicationContext factory = 
 				new ClassPathXmlApplicationContext("spring.xml");
 
-		Service<String, ProductVO> service = 
-				(Service<String, ProductVO>) factory.getBean("pservice");
+		Service<Integer, ProductVO> service = 
+				(Service<Integer, ProductVO>) factory.getBean("pservice");
 		List<ProductVO> list = null; //빈 깡통을 만들어 놓고 Array list가 리턴 될 수 있게끔 
 		list = service.get();
 		

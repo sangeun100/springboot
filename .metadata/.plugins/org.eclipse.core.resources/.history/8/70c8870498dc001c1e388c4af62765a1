@@ -1,7 +1,0 @@
-package com.multi.user;
-
-import com.multi.frame.Dao;
-
-public class UserDao implements Dao<UserVO> {
-
-}

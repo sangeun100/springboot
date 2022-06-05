@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+<h1>Cust Select Page</h1>
+<table>
+	<thead>
+		<tr><th>ID</th><th>NAME</th></tr>
+	</thead>
+	<tbody>
+		<tr th:each="c:${allcust}">
+			<td><a href="detail" th:href="@{detail(id=${c.id})}" th:text="${c.id}">ID</a></td>
+			<td th:text="${c.name}">NAME</td>
+		</tr>
+	</tbody>
+</table>

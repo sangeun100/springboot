@@ -1,7 +1,0 @@
-package com.user;
-
-import com.frame.Service;
-
-public class UserService implements Service<K, V> {
-
-}

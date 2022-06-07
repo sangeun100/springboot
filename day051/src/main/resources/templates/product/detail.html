@@ -1,0 +1,14 @@
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<body>
+	<h1>Product Detail PAGE</h1>
+<!-- 	<h3 th:text="${dproduct.id}"></h3> -->
+	<h3 th:text="${dproduct.id}"></h3>
+	<h3 th:text="${dproduct.name}"></h3>
+	<h3 th:text="${dproduct.price}"></h3>
+	<h3 th:text="${dproduct.rate}"></h3>
+	<a href="" th:href="@{delete(id=${dproduct.name})}">DELETE</a>
+	<a href="" th:href="@{update(id=${dproduct.name})}">UPDATE</a>
+</body>

@@ -8,4 +8,5 @@
 <aop-project name="day033"/>
 <aop-project name="day041"/>
 <aop-project name="day051"/>
+<aop-project name="shop"/>
 </aop-reference-model>

@@ -5,10 +5,13 @@ PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
 <mapper namespace="com.multi.mapper.ProductMapper">
 	
 	<select id="select" parameterType="int" resultType="ProductVO"> 
-		SELECT SELECT * FROM product
+		SELECT * FROM product WHERE id=#{id}
+	</select>
+	<select id="selectcnt" resultType="int"> 
+		SELECT last_insert_id() as cnt
 	</select>
 	<select id="selectall" resultType="ProductVO">
-		SELECT SELECT * FROM product
+		SELECT * FROM product ORDER BY 1
 	</select>
 	<insert id="insert" parameterType="ProductVO">
 		INSERT INTO product VALUES (NULL,#{name},#{price},SYSDATE(),#{rate})

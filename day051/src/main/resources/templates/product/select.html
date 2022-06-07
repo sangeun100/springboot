@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+<h1>Product Select Page</h1>
+<table>
+	<thead>
+		<tr><th>NAME</th><th>PRICE</th><th>RATE</th></tr>
+	</thead>
+	<tbody>
+		<tr th:each="c:${allproduct}">
+			<td><a href="detail" th:href="@{detail(id=${p.id})}" th:text="${p.id}">ID</a></td>
+			<td th:text="${p.name}">NAME</td>
+			<td th:text="${p.price}">PRICE</td>
+			<td th:text="${p.rate}">RATE</td>
+		</tr>
+	</tbody>
+</table>

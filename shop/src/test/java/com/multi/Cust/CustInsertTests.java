@@ -15,11 +15,10 @@ class CustInsertTests {
 
 	@Test
 	void contextLoads() {
-		CustVO c = new CustVO("id37", "pwd33", "kee");
+		CustVO obj = new CustVO("id06", "Jin", "seoul","pwd06");
 		try {
-			biz.register(c);
-			System.out.print("Registered OK");
-			System.out.println(c);
+			biz.register(obj);
+			System.out.println(obj);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

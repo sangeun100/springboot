@@ -8,13 +8,14 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.multi.biz.CateBiz;
 import com.multi.vo.CateVO;
+import com.multi.vo.CustVO;
 
 @SpringBootTest
-class CateSelectmainTests {
-
+class CateSelectMainTests {
+	
 	@Autowired
 	CateBiz biz;
-
+	
 	@Test
 	void contextLoads() {
 		List<CateVO> list = null;
@@ -29,3 +30,5 @@ class CateSelectmainTests {
 	}
 
 }
+
+

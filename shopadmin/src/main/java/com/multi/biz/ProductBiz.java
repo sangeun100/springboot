@@ -9,13 +9,12 @@ import com.multi.frame.Biz;
 import com.multi.mapper.ProductMapper;
 import com.multi.vo.ProductAVGVO;
 import com.multi.vo.ProductVO;
-
 @Service
-public class ProductBiz implements Biz<Integer, ProductVO>{
-	
+public class ProductBiz implements Biz<Integer, ProductVO> {
+
 	@Autowired
 	ProductMapper dao;
-
+	
 	@Override
 	public void register(ProductVO v) throws Exception {
 		dao.insert(v);
@@ -24,13 +23,11 @@ public class ProductBiz implements Biz<Integer, ProductVO>{
 	@Override
 	public void modify(ProductVO v) throws Exception {
 		dao.update(v);
-		
 	}
 
 	@Override
 	public void remove(Integer k) throws Exception {
 		dao.delete(k);
-		
 	}
 
 	@Override
@@ -42,14 +39,18 @@ public class ProductBiz implements Biz<Integer, ProductVO>{
 	public List<ProductVO> get() throws Exception {
 		return dao.selectall();
 	}
+
 	public List<ProductVO> get2() throws Exception {
 		return dao.selectall2();
 	}
-
-	public List<ProductAVGVO> getavg() throws Exception {
-		return dao.selectallavg();
+	
+	public List<ProductAVGVO> get3() throws Exception {
+		return dao.selectall3();
 	}
-	
-	
-	
 }
+
+
+
+
+
+

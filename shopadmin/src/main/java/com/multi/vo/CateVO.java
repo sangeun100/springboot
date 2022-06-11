@@ -14,7 +14,7 @@ import lombok.ToString;
 public class CateVO {
 	private int id;
 	private String name;
-	private int pid; //상위 카테고리의 id
+	private Integer pid; //상위 카테고리의 id
 	public CateVO(int id, String name) {
 		super();
 		this.id = id;

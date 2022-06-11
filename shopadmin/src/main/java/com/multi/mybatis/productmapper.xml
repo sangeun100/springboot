@@ -40,7 +40,7 @@ PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
 	</select>
 	<insert id="insert" parameterType="productVO">
 		INSERT INTO product VALUES
-		(NUll,#{name},#{price},curdate(),#{cid},#{imgname})
+		(NUll,#{name},#{price},SYSDATE(),#{cid},#{imgname})
 	</insert>
 	<update id="update" parameterType="productVO">
 		UPDATE product SET

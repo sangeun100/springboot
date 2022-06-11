@@ -17,24 +17,6 @@ public class CartController {
 	@Autowired
 	CartBiz biz;
 	
-//	@RequestMapping("add")
-//	public String add(Model m) {
-//		m.addAttribute("center", "cust/add");
-//		return "/index";
-//	}
-//	
-//	@RequestMapping("addimpl")
-//	public String addimpl(Model m, CustVO obj) {
-//		
-//		try {
-//			biz.register(obj);
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//		
-//		return "redirect:detail?id="+obj.getId();
-//	}
-	
 	@RequestMapping("/select")
 	public String select(Model m) {
 		List<CartVO> list = null;
@@ -47,29 +29,6 @@ public class CartController {
 		m.addAttribute("center", "cart/select");
 		return "/index";
 	}
-	
-//	@RequestMapping("/detail")
-//	public String detail(Model m, int id) {
-//		CartVO obj = null;
-//		try {
-//			obj = biz.get(id);
-//			m.addAttribute("c", obj);
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//		m.addAttribute("center", "cart/detail");
-//		return "/index";
-//	}
-//	
-//	@RequestMapping("/update")
-//	public String update(Model m, CartVO obj) {
-//		try {
-//			biz.modify(obj);
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//		return "redirect:detail?id="+obj.getId();
-//	}
 	
 	
 }

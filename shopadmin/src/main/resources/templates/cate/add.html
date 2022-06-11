@@ -2,23 +2,24 @@
 
 <script>
 
-/* function sendId(id){
+ function sendId(id){
 	$.ajax({
-		url:'/checkid',
+		url:'/catecheckid',
 		data:{'id':id},
 		success:function(data){
 			if(data == '1'){
-				$('#ispan').text('사용 불가능한 ID');
+				$('#sid').text('사용 불가능한 ID');
 			}else{
-				$('#ispan').text('사용 가능한 ID');
+				$('#sid').text('사용 가능한 ID');
 			}
 		}
 	});
-}; */
+}; 
 
 $(document).ready(function(){
-	$('input[name="id"]').keyup(function(){
+	$('input[name="id"]').blur(function(){
 		var id = $(this).val(); 
+	//	alert(id);
 		sendId(id);
 	});
 	
@@ -41,13 +42,19 @@ $(document).ready(function(){
           </div>
           <form class="user">
               <div class="form-group">
-                  ID: <span id="ispan"></span><input type="text" class="form-control form-control-item" name="id">
+                  ID: <span id="sid"></span><input type="text" class="form-control form-control-item" name="id">
               </div>
               <div class="form-group">
                  NAME: <input type="text" class="form-control form-control-item" name="name">
               </div>
               <div class="form-group">
-                  PID: <input type="text" class="form-control form-control-item" name="pid">
+                  PID: 
+                  <select name="pid" class="form-control form-control-item">
+                  	<option value="0">TOP</option>
+                  	<option th:each="c : ${slist}" 
+                  			th:value="${c.id}" 
+                  			th:text="${c.name}"></option>
+                  </select>
               </div>
               
               <a id="registerbtn" href="#" class="btn btn-primary btn-user btn-block">

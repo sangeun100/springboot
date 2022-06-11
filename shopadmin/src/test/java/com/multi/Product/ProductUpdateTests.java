@@ -15,7 +15,7 @@ class ProductUpdateTests {
 
 	@Test
 	void contextLoads() {
-		ProductVO obj = new ProductVO("id33",1000,10200,"3.jpg");
+		ProductVO obj = new ProductVO("bang",10100,14,"3.jpg");
 		try {
 			biz.modify(obj);
 			System.out.println(obj);

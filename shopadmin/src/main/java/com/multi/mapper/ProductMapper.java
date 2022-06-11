@@ -7,8 +7,9 @@ import org.springframework.stereotype.Repository;
 
 import com.multi.vo.ProductAVGVO;
 import com.multi.vo.ProductVO;
-@Mapper
+
 @Repository
+@Mapper
 public interface ProductMapper {
 
 	public void insert(ProductVO obj) throws Exception;
@@ -17,5 +18,5 @@ public interface ProductMapper {
 	public ProductVO select(int obj) throws Exception;
 	public List<ProductVO> selectall() throws Exception;
 	public List<ProductVO> selectall2() throws Exception;
-	public List<ProductAVGVO> selectallavg() throws Exception;
+	public List<ProductAVGVO> selectall3() throws Exception;
 }

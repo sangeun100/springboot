@@ -9,20 +9,21 @@ import com.multi.vo.ProductVO;
 
 @SpringBootTest
 class ProductInsertTests {
-	
+
 	@Autowired
 	ProductBiz biz;
-
+	
 	@Test
 	void contextLoads() {
-		ProductVO obj = new ProductVO("shirts1",10000,10,"3.jpg");
+		//(NULL, 'levis',10000,curdate(),11,'a.jpg')
+		ProductVO obj = new ProductVO("hat3",17000,31,"3.jpg");
 		try {
 			biz.register(obj);
-			System.out.println(obj);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
 }
+
+

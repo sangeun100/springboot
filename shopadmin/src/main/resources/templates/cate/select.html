@@ -1,3 +1,4 @@
+<meta charset="utf-8">
 <!-- Page Heading -->
 <h1 class="h3 mb-2 text-gray-800">Category Tables</h1>
 
@@ -30,7 +31,8 @@
 						<td><a href="" th:text="${c.id}"
 							th:href="@{detail(id=${c.id})}">id01</a></td>
 						<td th:text="${c.name}">Edinburgh</td>
-						<td th:text="${c.pid}">Seoul</td>
+						<td th:if="${c.pid == 0} " th:text="TOP">Seoul</td>
+						<td th:unless="${c.pid == 0} " th:text="${c.pid}">Seoul</td>
 					</tr>
 				</tbody>
 			</table>

@@ -15,7 +15,11 @@
 						<th>ID</th>
 						<th>UID</th>
 						<th>PID</th>
-						<th>REGDATE</th>						
+						<th>PRODUCT NAME</th>
+						<th>PRODUCT PRICE</th>
+						<th>CATEGORY</th>	
+						<th>REGDATE</th>	
+						<th>COUNT</th>						
 					</tr>
 				</thead>
 				<tfoot>
@@ -23,16 +27,18 @@
 						<th>ID</th>
 						<th>UID</th>
 						<th>PID</th>
+						<th>CATEGORY</th>	
 						<th>REGDATE</th>	
+						<th>COUNT</th>	
 					</tr>
 				</tfoot>
 				<tbody>
 					<tr th:each="c : ${clist}">
 						<!-- /cust/detail?id=id01 -->
-						<td><a href="" th:text="${c.id}"
-							th:href="@{detail(id=${c.id})}">id01</a></td>
+						<td th:text="${c.id}">id01</td>
 						<td th:text="${c.uid}">pwd01</td>
 						<td th:text="${c.pid}">Edinburgh</td>
+						<td th:text="${c.cate}">Edinburgh</td>
 						<td th:text="${#dates.format(c.regdate,'yyyy/MM/dd')}">2011/04/25</td>
 					</tr>
 				</tbody>

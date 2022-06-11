@@ -1,4 +1,4 @@
-package com.multi.Product;
+package com.multi.Product; // my sql에서 productAVG 추가 해야함
 
 import java.util.List;
 
@@ -8,6 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.multi.biz.ProductBiz;
 import com.multi.vo.ProductAVGVO;
+import com.multi.vo.ProductVO;
 
 @SpringBootTest
 class ProductSelectAllAVGTests {
@@ -17,10 +18,10 @@ class ProductSelectAllAVGTests {
 
 	@Test
 	void contextLoads() {
-		List<ProductAVGVO> list = null;
+		List<ProductVO> list = null;
 		try {
-			list = biz.getavg();
-			for (ProductAVGVO obj : list) {
+			list = biz.get();
+			for (ProductVO obj : list) {
 				System.out.println(obj);
 			}
 		} catch (Exception e) {

@@ -19,6 +19,13 @@ public class CateController {
 	
 	@RequestMapping("add")
 	public String add(Model m) {
+		List<CateVO> list = null;
+		try {
+			list = biz.getmain();
+			m.addAttribute("slist", list);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		m.addAttribute("center", "cate/add");
 		return "/index";
 	}
@@ -32,7 +39,7 @@ public class CateController {
 			e.printStackTrace();
 		}
 		
-		return "redirect:detail?.id="+obj.getId();
+		return "redirect:detail?id="+obj.getId();
 	}
 	
 	@RequestMapping("/select")
@@ -51,8 +58,10 @@ public class CateController {
 	@RequestMapping("/detail")
 	public String detail(Model m, int id) {
 		CateVO obj = null;
+		List<CateVO> list = null;
 		try {
 			obj = biz.get(id);
+			list = biz.getmain();
 			m.addAttribute("c", obj);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -68,7 +77,19 @@ public class CateController {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return "redirect:detail?.id="+obj.getId();
+		return "redirect:detail?id="+obj.getId();
+		
+	}
+	@RequestMapping("delete")
+	public String delete(int id, Model m) {
+		try {
+			biz.remove(id);
+		} catch (Exception e) {
+			e.printStackTrace();
+			m.addAttribute("msg", "삭제 할 수 없습니다.");
+			return "redirect:detail?id="+id;
+		}
+		return "redirect:select";
 	}
 	
 	
